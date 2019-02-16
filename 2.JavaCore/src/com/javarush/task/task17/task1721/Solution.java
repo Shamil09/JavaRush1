@@ -31,13 +31,6 @@ public class Solution {
         System.out.println(allLines);
         System.out.println(forRemoveLines);
     }
-//3. Если список allLines содержит все строки из forRemoveLines, то удалить из списка allLines все строки,
-// которые есть в forRemoveLines.
-//4. Если условие из п.3 не выполнено, то:
-//4.1. очистить allLines от данных
-//4.2. выбросить исключение CorruptedDataException
-//Метод joinData должен вызываться в main. Все исключения обработайте в методе main.
-//Не забудь закрыть потоки.
     public void joinData() throws CorruptedDataException {
         if (forRemoveLines.containsAll(allLines)) allLines.removeAll(forRemoveLines);
         else {
